@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang = "eng">
+	<head>Utilizing FLASK IN WEB APPLICATIONS
+	<title>{{title}}</title></head>
+	<body>
+	<p></p>
+	<p>
+	<title>{{table_title}}</title>
+	<table>
+	<thead>
+	<tr> <th>Name</th>
+	<th>City</th>
+	<th>Count</th>
+	<th>Location</th></tr>
+	</thead>
+	<tbody>
+	{% for resul in results %}
+		<tr>
+		<td>{{resul.name}}</td>
+		<td>{{resul.city}}</td>
+		<td>{{resul.count}}</td>
+		<td>{{resul.locations}}</td>
+		</tr>
+		{% endfor %}
+		</tbody>
+	</table>
+	<p>
+	<h2> {{datalog}}</h2>
+	<table>
+	<thead>
+	<tr>
+	<th>UTC</th>
+	<th>Value</th>
+	<th>Tuple</th>
+	</tr>
+	</thead>
+	<tbody>
+	{% for tupls in tuples %}
+	<tr><td></td>
+		<td></td>
+	<td>{{tupls}}</td></tr>
+	{% endfor %}
+	</tbody>
+	</table>
+	<p>Raw list of tuples: {{tuples}}</p>
+	<p></p>
+	<p> Raw list of tuples from database: {{tupler}}</p>
+	<p>Refreshed Database tables</p>
+	<table>
+	<thead>
+	<th>utc</th>
+	<th>Value</th>
+	<th>tuple</th>
+	</thead>
+	<tbody>
+	{% for tups in tuplr %}
+	<tr><td>{{tups}}</td>
+	{% endfor %}</tbody>
+	</table>
+	</body>
+	
+</html>
